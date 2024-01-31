@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
+            step {
                 echo 'from Testing.. stage'
             }
         }
@@ -26,6 +26,10 @@ pipeline {
     
         success { 
             echo 'All stages are successful '
+        }
+
+        failure { 
+            echo 'from the failure block of post'
         }
 
     }
