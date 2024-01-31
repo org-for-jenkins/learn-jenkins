@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+
+    options {
+        timeout(time: 1, unit: 'SECONDS') 
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -8,8 +13,9 @@ pipeline {
             }
         }
         stage('Test') {
-            step {
+            steps {
                 echo 'from Testing.. stage'
+                sleep 10
             }
         }
         stage('Deploy') {
@@ -25,7 +31,7 @@ pipeline {
         }
     
         success { 
-            echo 'All stages are successful '
+            echo 'All stages are successful'
         }
 
         failure { 
