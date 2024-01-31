@@ -3,7 +3,7 @@ pipeline {
 
 
     options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 1, unit: 'HOURS') 
     }
 
     parameters {
@@ -27,7 +27,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'from Testing.. stage'
-                sleep 10
+                #sleep 10
             }
         }
         stage('Deploy') {
