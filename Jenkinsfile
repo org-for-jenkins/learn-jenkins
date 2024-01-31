@@ -30,7 +30,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh """
-                    echo 'from Testing.. stage'
+                    echo 'from Testing.. stage aaa'
                     #sleep 10
                 """
             }
