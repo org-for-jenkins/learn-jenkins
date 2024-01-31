@@ -34,6 +34,10 @@ pipeline {
             echo 'All stages are successful'
         }
 
+        aborted { 
+            echo 'from the aborted block of post'
+        }
+
         failure { 
             echo 'from the failure block of post'
         }
